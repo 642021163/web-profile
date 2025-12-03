@@ -1,0 +1,24 @@
+# dependencies
+node_modules/
+
+# next.js
+.next/
+out/
+dist/
+
+# 환경변수
+.env
+.env*.local
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# system
+.DS_Store
+Thumbs.db
+
+# ide
+.vscode/
+.idea/
