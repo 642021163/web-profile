@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import Image from "next/image"
 import { Github, Linkedin, Mail, ExternalLink, Rocket, Code, Briefcase, GraduationCap, Code2, Sparkles } from "lucide-react"
+import AutoImageSlider from "@/app/AutoImageSlider/AutoImageSlider.jsx"
 
 export default function PortfolioPage() {
   return (
@@ -256,14 +257,13 @@ export default function PortfolioPage() {
           <div className="flex flex-wrap justify-center gap-6 max-w-6xl mx-auto">
             <Card className="p-6 flex flex-col bg-white border-2 shadow-lg hover:shadow-2xl transition-all duration-300 group hover:-translate-y-2 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
               <div className="mb-4">
-                <div className="w-full h-48 rounded-xl mb-4 overflow-hidden shadow-md relative">
-                  <Image
-                    src="/assets/pre-edoc.png"
-                    alt="Data preparation system"
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
+                <AutoImageSlider
+                  images={[
+                    "/assets/loginpage.png",
+                    "/assets/pre-edoc.png",
+                    "/assets/DashboardAddmin.png"
+                  ]}
+                />
 
                 <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">
                   Data preparation for Electronic Document System
@@ -296,7 +296,7 @@ export default function PortfolioPage() {
                     </a>
                   </Button>
                   <Button size="sm" className="flex-1 shadow-md hover:shadow-lg transition-all" asChild>
-                    <a href="#" className="flex items-center justify-center gap-2">
+                    <a href="http://localhost:3001/" className="flex items-center justify-center gap-2">
                       <ExternalLink className="w-4 h-4" />
                       Demo
                     </a>
